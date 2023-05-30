@@ -1,6 +1,9 @@
 
 /*Creating variables and using tham as var(--name)*/
 :root {
+	--maincolor: hsl(220, 88%, 20%);
+	--maincolor1l:hsl(220, 67%, 75%);
+	--secondcolororange: hsl(18, 65%, 70%);
 	--darkcolor: #F4F1BB;
 	--lightcolor: #9BC1BC;
 	--textcolor: white;
@@ -13,16 +16,17 @@ body {
 
 }
 h1{
-	color: var(--textcolor);
+	color: var(--maincolor);
 	text-align: center;
-	padding-bottom: 10px;
-	padding-top: 10px;
-	font-size: 40px;
+	padding: 30px;
+	margin: 0px;
+	font-size: 46px;
 }
 p{
-	color: var(--textcolor);
-	font-size: 30px;
-	padding: 10px;
+	color: var(--maincolor);
+	font-size: 20px;
+	padding-left: 20%;
+	padding-right: 20%;
 	margin: 0px;
 }
 
@@ -30,18 +34,31 @@ p{
 
 /* Basic Div Styles and Layout styles*/
 #top{
-	background-color: #ed6a5a;
-	height: 30%;
+	background-color: var(--maincolor1l);
+	border-radius: 25px;
+	width: 70%;
+	height: 120px;
 	padding: 0px;
-	margin: 0px;
+	margin: 10px;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+#description{
+		margin: 20px;
 }
 #left{
-	width: 50%;
-	background-color: var(--darkcolor);
+	width: 40%;
+	margin-right: 2%;
+	margin-left: 8%;
+	border-radius: 25px;
+	background-color: var(--secondcolororange);
 }
 #right{
-	width: 50%;
-	background-color: var(--lightcolor);
+	width: 40%;
+	margin-left: 2%;
+	margin-right: 8%;
+	border-radius: 25px;
+	background-color: var(--secondcolororange);
 }
 .colums{
 	float: left;
