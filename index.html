@@ -9,48 +9,57 @@
 	<script src="myScript.js"></script>
 </head>
 <body>
-
-<div id="top">
-<h1>Генератор математических выражений</h1>
+<div id="header">
+	<div id="name">
+	<h1>Генератор математических выражений</h1>
+	</div>
+	<div id="description">
+		<p>Это генератор простых математических выраженией и уравнениj, выберите тип выражений и уровень сложности, а также количество генераций. Максимальное колиество генераций 500, все выражения еазделены знаком запятой</p>
+	</div>
 </div>
-<div id="description">
-	<p>Это генератор простых математических выраженией и уравнениj, выберите тип выражений и уровень сложности, а также количество генераций. Максимальное колиество генераций 500, все выражения еазделены знаком запятой</p>
-</div>
 
-<div class="rows">
+<div class="grid-container">
 
-	<!-- This is the form for the dropdown menus and buttons and everything-->
-	<div class="colums" id="left">
-		<label class="dropdownlabel">Типы Выражений: </label>
-		<select name="type" id="type" class="dropdownmenu" required>
-			<option disabled selected value="none">None</option>
-	    	<option value="t1" >Простые выражения с плюсом и минусом</option>
-	    	<option value="t2" >Простые выражения с плюсом и минусом делением и умнoжением</option>
-	    	<option value="t3" >Выражения с положительными и отрицательными числами (ответ может быть отрицательным)</option>
-	    	<option value="t4" >Выражения с положительными и отрицательными числами, с делением и умножением (ответ может быть отрицательным)</option>
-	    	<option value="t5" >Уравнения с одним неизвестным</option>
-	  	</select>
-	  	<br><br>
-	  	<label class="dropdownlabel">Уровень Сложности: </label>
-		<select name="level" id="level" class="dropdownmenu" required>
-			<option disabled selected value="none">None</option>
-	    	<option value="l1" >Легко</option>
-	   		<option value="l2" >Средне</option>
-	    	<option value="l3" >Сложно</option>
-	  	</select>
-	  	<br><br>
-	  	<label class="dropdownlabel">Количество Генераций, (max 500) : </label>
-	  	<input type="number" id="num" class="dropdownmenu" max="500" min="1" maxlength="3" value="1" required>
-	  	<br><br>
-		<input type="button" id="button" value="Submit" onclick="submit()">
+	<div class="grid-item sidebar" id="leftleft"></div>
+
+	<div class="grid-item mainbox">
+		<!-- This is the form for the dropdown menus and buttons and everything-->
+		<div class="box" id="left">
+			<label class="dropdownlabel">Типы Выражений</label><br><br>
+			<select name="type" id="type" class="dropdownmenu" required>
+				<option disabled selected value="none">None</option>
+		    	<option value="t1" >Простые выражения с плюсом и минусом</option>
+		    	<option value="t2" >Простые выражения с плюсом и минусом делением и умнoжением</option>
+		    	<option value="t3" >Выражения с положительными и отрицательными числами (ответ может быть отрицательным)</option>
+		    	<option value="t4" >Выражения с положительными и отрицательными числами, с делением и умножением (ответ может быть отрицательным)</option>
+		    	<option value="t5" >Уравнения с одним неизвестным</option>
+		  	</select>
+		  	<br><br>
+		  	<label class="dropdownlabel">Уровень Сложности</label><br><br>
+			<select name="level" id="level" class="dropdownmenu" required>
+				<option disabled selected value="none">None</option>
+		    	<option value="l1" >Легко</option>
+		   		<option value="l2" >Средне</option>
+		    	<option value="l3" >Сложно</option>
+		  	</select>
+		  	<br><br>
+		  	<label class="dropdownlabel">Количество Генераций, (max 500)</label><br><br>
+		  	<input type="number" id="num" class="dropdownmenu" max="500" min="1" maxlength="3" value="1" required>
+		  	<br><br>
+		  	<div class="btn">
+				<input type="button" id="button" value="Submit" onclick="submit()">
+			</div>
+		</div>
 	</div>
 
-
-	<div class="colums" id="right">
-		<textarea id="textarea" name="text" rows="" cols=""></textarea>
-		<br><br>
+	<div class="grid-item mainbox">
+		<div class="box" id="right">
+			<textarea id="textarea" name="text" rows="" cols=""></textarea>
+			<br><br>
+		</div>
 	</div>
 
+	<div class="grid-item sidebar" id="rightright"></div>
 
 </div>
 
