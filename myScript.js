@@ -626,13 +626,14 @@ window.onload = function(){
 			if (times < 501){
 				//generates math expression based on the generator function and pushes them in to the array text
 				while (i < times) {
-	 			genexpr = generator()
+	 			genexpr = generator() + " = "
 	 			text.push(genexpr);
 	  			i++;
 			}
 			
 			//puts the array text in the textarea
-			textarea.innerHTML = text
+			textarea.value = text.join("\n");
+
 
 		} else {textarea.innerHTML = "Max 500 times"}
 	}catch(err){"Error sumbit function occured"}};
